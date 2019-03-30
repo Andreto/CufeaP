@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <style>
+      body{
+        margin-left: 60px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 740px;
+      }
+
+      #andreto-site-a{
+        font-size: 18px;
+        position: fixed;
+        bottom: 0;
+        background-color: #fff;
+        width: 100%;
+        padding-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scratch-CustomFeaturedProject</h1>
+    <p>Easy to use bookmark for setting custom Scratch featured project.</p>
+    <p>Set <strong>both shared and unshared</strong> projects as your Featured Project.</p>
+    <br>
+    <h2>Step-by-Step How-To:</h2>
+    <p>1. Drag this link to your bookmarks:
+    <a id="markA" 
+    href="javascript:var dataObj={'featured_project':prompt('Enter project-id:')};$.ajax({dataType:'html',contentType:'application/json;charset=utf-8',type:'PUT',url:'https://scratch.mit.edu/site-api/users/all/'+Scratch.INIT_DATA.PROFILE.model.id+'/',data:JSON.stringify(dataObj)});$(document).ajaxComplete(function(){location.reload();});"
+    >Scratch Featured</a></p>
+    <p>2. Go to your Scratch profile page and make sure you are logged in.</p>
+    <p>3. Click on the bookmark and enter the id of the project you want to have as featured project.</p>
+    <p>4. Press ok and wait for the site to reload. Now the featured project should have updated. If the project is not updating, please read the Troubleshooting section on this page and make sure everything is done correctly.</p>
+
+    <h2>Troubleshooting:</h2>
+    <p>You have to be signed in to the same account as you are setting the featured project for.</p>
+    <p>You can only set your own projects as your featured project.</p>
+    <p>You can not set projects from your trash folder as your featured project.</p>
+
+    <a id="andreto-site-a" href="https://andreto.tk/">Go to andreto.tk</a>
+  </body>
+</html>
